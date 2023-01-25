@@ -11,7 +11,7 @@ Music is a powerful form of expression that can lead to deep human connections. 
 # Key Features
 Secure login over HTTPS 
 
-Ability to share songs to a public feed
+Ability to share songs to a public feed (Called the "Friends" page)
 
 Ability to share songs to a personal profile
 
