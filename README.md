@@ -1,11 +1,23 @@
-# startup
-Start Up Application Repository
+# Song Share
 
-Change for first commit test
+# Design
+Music is a powerful form of expression and can lead to a deep level of human connection. The song share app allows you to connect with friends and family on another level by sharing your favorite songs to a public feed. When users find a new song to obsess over, they will be able to share it to their profile. Additionally, when they find themselves on the hunt for new music, they can use the song share app to see what their friends have been listening to. In this way, the song share app becomes a social media to bring people together. 
 
-Commit from github creating error
+<img width="205" alt="Screen Shot 2023-01-25 at 4 23 38 PM" src="https://user-images.githubusercontent.com/97192252/214715683-f6a3f161-43b0-4702-b774-c096d2c492cc.png">
+<img width="207" alt="Screen Shot 2023-01-25 at 4 23 50 PM" src="https://user-images.githubusercontent.com/97192252/214715715-905a3bf4-1be3-4af7-897b-a9ea515b1459.png">
+<img width="207" alt="Screen Shot 2023-01-25 at 4 24 03 PM" src="https://user-images.githubusercontent.com/97192252/214715747-3a04137d-a1ad-4ae3-a889-6be50aeec4ff.png">
 
-Notes:
+
+#Key Features
+Secure login over HTTPS
+Ability to share songs to a public feed
+Ability to share songs to a personal profile
+Ability for a user to edit and delete their song posts
+Display of songs that your friends have shared
+Ability to comment on friends' posts
+Ability for a user to edit and delete their comments
+
+#Notes:
 From this assignment, I learned more about the process of commiting, pushing, and pulling versions of repositories from and to GitHub. I have used GitHub a little bit in other classses, but I never understood the process that well. Here is the process as I now understand it:
 
 1. To get updates from pc to GH:
