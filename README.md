@@ -9,12 +9,18 @@ Music is a powerful form of expression and can lead to a deep level of human con
 
 
 # Key Features
-Secure login over HTTPS
+Secure login over HTTPS 
+
 Ability to share songs to a public feed
+
 Ability to share songs to a personal profile
+
 Ability for a user to edit and delete their song posts
+
 Display of songs that your friends have shared
+
 Ability to comment on friends' posts
+
 Ability for a user to edit and delete their comments
 
 # Notes:
