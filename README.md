@@ -45,3 +45,8 @@ From this assignment, I learned more about the process of commiting, pushing, an
     
 
 3. Sometimes if the same line is altered from multiple locations, you make have to resolve the merge. This is very straight forward in VS. 
+
+
+
+
+#Notes: This is the code to shell into my server from terminal: ssh -i ~/Desktop/CS260/AshlynDunn16.pem ubuntu@3.134.86.176
