@@ -51,3 +51,5 @@ From this assignment, I learned more about the process of commiting, pushing, an
 
 #Notes: This is the code to shell into my server from terminal: ssh -i ~/Desktop/CS260/AshlynDunn16.pem ubuntu@172.31.40.250 (elastic ip address)
 #NEW:: ssh -i ~/Desktop/CS260/AshlynDunn16.pem ubuntu@260projectad.click
+
+PUSHING changes to developent environment: ./deployWebsite.sh -k ~/Desktop/CS260/AshlynDunn16.pem -h 260projectad.click
