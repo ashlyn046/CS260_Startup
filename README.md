@@ -62,3 +62,10 @@ SIMON NOTES 2-8-23
 3. I learned more about how all of the elements I have learned interact, and how they look in an actual application.
 4. I learned again how to commit and push and pull between my local machine and github. Specifically, click the three circles and lines icon, click the commit button, change the commit file, click check in the top right corner, and then click out on the blue rectange. 
 5. I understand input and embedded links a lot better. 
+
+
+Simon CSS Notes
+1. I learned a lot more about using flex
+2. I learned a lot more about classes and how they can be useful for design
+3. I learned how to connect the html files to the CSS files as their style guide
+4. see simon project in vs code for reference
