@@ -2,7 +2,7 @@
 
 # Design
 Music is a powerful form of expression that can lead to deep human connections. The Song Share app allows individuals to connect with friends and family on another level by sharing their favorite songs. When users find a new song to obsess over, they will be able to share it to their profile. The posted song will then appear on a public feed for their friends to view and interact with. Additionally, when users find themselves on the hunt for new music, they can use the song share app to see what their friends have been listening to. In this way, the song share app is a social media to bring people together. 
-
+Check
 <img width="205" alt="Screen Shot 2023-01-25 at 4 23 38 PM" src="https://user-images.githubusercontent.com/97192252/214715683-f6a3f161-43b0-4702-b774-c096d2c492cc.png">
 <img width="207" alt="Screen Shot 2023-01-25 at 4 23 50 PM" src="https://user-images.githubusercontent.com/97192252/214715715-905a3bf4-1be3-4af7-897b-a9ea515b1459.png">
 <img width="207" alt="Screen Shot 2023-01-25 at 4 24 03 PM" src="https://user-images.githubusercontent.com/97192252/214715747-3a04137d-a1ad-4ae3-a889-6be50aeec4ff.png">
