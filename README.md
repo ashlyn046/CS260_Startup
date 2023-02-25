@@ -2,7 +2,7 @@
 
 # Design
 Music is a powerful form of expression that can lead to deep human connections. The Song Share app allows individuals to connect with friends and family on another level by sharing their favorite songs. When users find a new song to obsess over, they will be able to share it to their profile. The posted song will then appear on a public feed for their friends to view and interact with. Additionally, when users find themselves on the hunt for new music, they can use the song share app to see what their friends have been listening to. In this way, the song share app is a social media to bring people together. 
-Check
+
 <img width="205" alt="Screen Shot 2023-01-25 at 4 23 38 PM" src="https://user-images.githubusercontent.com/97192252/214715683-f6a3f161-43b0-4702-b774-c096d2c492cc.png">
 <img width="207" alt="Screen Shot 2023-01-25 at 4 23 50 PM" src="https://user-images.githubusercontent.com/97192252/214715715-905a3bf4-1be3-4af7-897b-a9ea515b1459.png">
 <img width="207" alt="Screen Shot 2023-01-25 at 4 24 03 PM" src="https://user-images.githubusercontent.com/97192252/214715747-3a04137d-a1ad-4ae3-a889-6be50aeec4ff.png">
@@ -54,18 +54,16 @@ From this assignment, I learned more about the process of commiting, pushing, an
 
 PUSHING changes to developent environment: ./deployWebsite.sh -k ~/Desktop/CS260/AshlynDunn16.pem -h 260projectad.click
 
-
-
 SIMON NOTES 2-8-23
+
 1. code to deploy to the simon subaddress: ./deployFiles.sh -k ~/Desktop/CS260/AshlynDunn16.pem -h 260projectad.click -s simon
 2. I learned about permissions. If the deploy.sh file doesn't work, it is probably an issue with permissions. Here is a helpful exchange: https://stackoverflow.com/questions/14219092/bash-script-bin-bashm-bad-interpreter-no-such-file-or-directory
 3. I learned more about how all of the elements I have learned interact, and how they look in an actual application.
-4. I learned again how to commit and push and pull between my local machine and github. Specifically, click the three circles and lines icon, click the commit button, change the commit file, click check in the top right corner, and then click out on the blue rectange. 
-5. I understand input and embedded links a lot better. 
-
-
+4. I learned again how to commit and push and pull between my local machine and github. Specifically, click the three circles and lines icon, click the commit button, change the commit file, click check in the top right corner, and then click out on the blue rectange.
+5. I understand input and embedded links a lot better.
 Simon CSS Notes
+
 1. I learned a lot more about using flex
 2. I learned a lot more about classes and how they can be useful for design
 3. I learned how to connect the html files to the CSS files as their style guide
-4. see simon project in vs code for reference
+see simon project in vs code for reference
