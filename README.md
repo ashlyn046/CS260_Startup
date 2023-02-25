@@ -53,3 +53,19 @@ From this assignment, I learned more about the process of commiting, pushing, an
 #NEW:: ssh -i ~/Desktop/CS260/AshlynDunn16.pem ubuntu@260projectad.click
 
 PUSHING changes to developent environment: ./deployWebsite.sh -k ~/Desktop/CS260/AshlynDunn16.pem -h 260projectad.click
+
+
+
+SIMON NOTES 2-8-23
+1. code to deploy to the simon subaddress: ./deployFiles.sh -k ~/Desktop/CS260/AshlynDunn16.pem -h 260projectad.click -s simon
+2. I learned about permissions. If the deploy.sh file doesn't work, it is probably an issue with permissions. Here is a helpful exchange: https://stackoverflow.com/questions/14219092/bash-script-bin-bashm-bad-interpreter-no-such-file-or-directory
+3. I learned more about how all of the elements I have learned interact, and how they look in an actual application.
+4. I learned again how to commit and push and pull between my local machine and github. Specifically, click the three circles and lines icon, click the commit button, change the commit file, click check in the top right corner, and then click out on the blue rectange. 
+5. I understand input and embedded links a lot better. 
+
+
+Simon CSS Notes
+1. I learned a lot more about using flex
+2. I learned a lot more about classes and how they can be useful for design
+3. I learned how to connect the html files to the CSS files as their style guide
+4. see simon project in vs code for reference
