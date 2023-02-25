@@ -99,14 +99,43 @@ button {
   img {
     padding-left: 20px;
     padding-top: 20px;
-    border-radius: 10%;
 
     max-width: 30%;
     height: auto;
   }
 
-  main.text{
+  main.currtitle{
     display:inline-block;
     padding:20px;
     color:white;
+  }
+
+.sectitle{
+    color: black !important;
+    padding-left: 100px;
+    padding-top: 100px;
+    font-size: 28px;
+  }
+
+  #intro{
+    padding-top: 100px;
+  }
+
+  .songs{
+    display: grid;
+    padding-left: 100px;
+    grid-template-columns: repeat(auto-fill, minmax(10px, 800px));
+    grid-auto-rows: 70px;
+    grid-gap: 1em;
+  }
+
+  .song{
+    background-color:white;
+    border-style: solid;
+    border-color: black;
+  }
+
+  .songs {
+    float: left;
+    width: 50%;
   }
