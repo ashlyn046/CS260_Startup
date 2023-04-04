@@ -1,28 +1,37 @@
-function loadSongs() {
-    const songs = JSON.parse(localStorage.getItem("songs")) || [];
+  function loadSongs() {
+    alert("in load");
+    let songs = [];
+    const songsText = localStorage.getItem('songs');
+    if (songsText) {
+        alert("in songsText is not empty");
+      songs = JSON.parse(songsText);
+    }
   
-    const tableBodyEl = document.querySelector("#songs");
+    const tableBodyEl = document.querySelector('#songs');
   
     if (songs.length) {
+        alert("songs length was not empty");
       for (const [i, song] of songs.entries()) {
-        const positionTdEl = document.createElement("td");
-        const singerTdEl = document.createElement("td");
-        const titleTdEl = document.createElement("td");
+        alert("in for");
+        const singerTdEl = document.createElement('td');
+        const titleTdEl = document.createElement('td');
   
-        positionTdEl.textContent = i + 1;
         singerTdEl.textContent = song.singer;
         titleTdEl.textContent = song.title;
   
-        const rowEl = document.createElement("tr");
-        rowEl.appendChild(positionTdEl);
+        const rowEl = document.createElement('tr');
         rowEl.appendChild(singerTdEl);
         rowEl.appendChild(titleTdEl);
+
+        alert(rowEl);
   
+        //error: cannot read propertied of null
         tableBodyEl.appendChild(rowEl);
       }
     } else {
-      tableBodyEl.innerHTML = '<tr><td colspan=3>No songs shared yet</td></tr>';
+        alert("in else");
+      tableBodyEl.innerHTML = '<tr><td colSpan=4>BNo songs yet!</td></tr>';
     }
   }
   
-  loadSongs();
+loadSongs();
