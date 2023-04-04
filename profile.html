@@ -6,6 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Song Share</title>
 
+    <script src="profile.js"></script>
     <link rel="stylesheet" href="style.css" />
 
     <!-- Include bootstrap CSS framework -->
@@ -45,17 +46,17 @@
             <p class = "currtitle" >Profile</p>
             <img class = "songs" src="IMG_4593.jpeg">
             <div class="songs" id="intro">Your songs</div>
-            <ul class="songs">
-                <li class="song">
-                  Snail Mail: light blue
-                </li>
-                <li class="song">
-                  Boygenius: Souvenir
-                </li>
-                <li class="song">
-                  Lana Del Rey: Happiness is a butterfly
-                </li>
-          </ul>
+            
+            <table>
+              <thead>
+                <tr>
+                  <th>Position</th>
+                  <th>Singer</th>
+                  <th>Title</th>
+                </tr>
+              </thead>
+              <tbody id="songs"></tbody>
+            </table>
 
         </div>
 

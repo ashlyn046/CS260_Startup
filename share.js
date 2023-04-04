@@ -12,4 +12,11 @@ function share() {
     alert("Song shared successfully!");
     singerEl.value = "";
     titleEl.value = "";
+
+    window.location.href = "profile.html";
+  }
+
+  window.onload = function() {
+    const shareButton = document.querySelector("#share");
+    shareButton.addEventListener("click", share);
   }
