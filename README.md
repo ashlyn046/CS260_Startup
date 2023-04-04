@@ -67,3 +67,9 @@ Simon CSS Notes
 2. I learned a lot more about classes and how they can be useful for design
 3. I learned how to connect the html files to the CSS files as their style guide
 see simon project in vs code for reference
+
+
+HTML CSS Project notes:
+1. I realized how important it is to use good containers
+2. I learned that lists and unordered lists are really good for a lot of things
+3. I had to use forms, and I got a lot more comfortable with that syntax
