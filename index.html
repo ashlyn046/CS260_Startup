@@ -7,6 +7,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Song Share</title>
 
+    <script src="login.js"></script>
     <link rel="stylesheet" href="style.css" />
 
     <!-- Include bootstrap CSS framework -->
@@ -44,14 +45,15 @@
           <h1>Login</h1>
           <div class="container">
             <form>
-                <input placeholder="Username" type="text" name="username1" class="username" required />
+                <input placeholder="Username" type="text" name="username1" class="username" id="username" required />
                     <label for="username1"  style="display:none">Username Required</label>
-                <input placeholder="Password" type="password" class="password1" name="password" required/>
+                <input placeholder="Password" type="password" class="password1" name="password" id = "password" required/>
                     <label for="password1"  style="display:none">Password Required</label>
-                <button id="login" class="btn">Login</button>
+                <button id="login" class="btn" onclick="login()">Login</button>
             </form>
           </div>
         </div>
+      <div>
 
   </body>
 
