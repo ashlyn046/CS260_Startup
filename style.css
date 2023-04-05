@@ -139,3 +139,7 @@ button {
     float: left;
     width: 50%;
   }
+
+  #songs{
+    padding-top: 1px
+  }
