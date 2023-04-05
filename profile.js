@@ -27,7 +27,6 @@
     if (songs.length) {
         alert("songs length was not empty");
       for (const [i, song] of songs.entries()) {
-        alert("in for");
         const singerTdEl = document.createElement('td');
         const titleTdEl = document.createElement('td');
   
@@ -40,11 +39,10 @@
 
         alert(rowEl);
   
-        //error: cannot read propertied of null
+        //error: cannot read property of null
         tableBodyEl.appendChild(rowEl);
       }
     } else {
-        alert("in else");
       tableBodyEl.innerHTML = '<tr><td colSpan=2>No songs yet!</td></tr>'; //this didn't post :(
     }
   }
