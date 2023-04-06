@@ -40,6 +40,18 @@
     } else {
       tableBodyEl.innerHTML = '<tr><td colSpan=2>No songs yet!</td></tr>'; //this didn't post :(
     }
+
+    //here, we upload username and password to display
+    const usernameElement = document.getElementById("username");
+    const passwordElement = document.getElementById("password");
+
+    // Get the values of "userName" and "password" from localStorage
+    const username = localStorage.getItem("userName");
+    const password = localStorage.getItem("password");
+
+    // Set the values of the username and password elements
+    usernameElement.innerText = username;
+    passwordElement.innerText = password;
   }
   
 loadSongs();
