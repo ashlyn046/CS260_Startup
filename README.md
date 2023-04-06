@@ -73,3 +73,10 @@ HTML CSS Project notes:
 1. I realized how important it is to use good containers
 2. I learned that lists and unordered lists are really good for a lot of things
 3. I had to use forms, and I got a lot more comfortable with that syntax
+
+
+Start up deliverable - JavaScript Notes:
+1. I learned how to user local storage to store information
+2. I learned how to set up a login - like interaction
+3. I learned how to display information pulled from local storage
+4. I learned how to make html and js files interact. REMEMBER: if you need to access the html elements int he javascript, you have to put the reference to the javascript file at the BOTTOM of your main in html or else it would be able to find the elements because it will have run before the html. 
