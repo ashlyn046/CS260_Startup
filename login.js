@@ -11,3 +11,7 @@ function login() {
     const loginButton = document.querySelector("#login");
     loginButton.addEventListener("click", login);
   }
+
+
+
+  //if you need to edit inside javascript, add js at the bottom of html. if you need js to run first, then put it in the head
