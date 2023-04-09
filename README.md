@@ -80,3 +80,12 @@ Start up deliverable - JavaScript Notes:
 2. I learned how to set up a login - like interaction
 3. I learned how to display information pulled from local storage
 4. I learned how to make html and js files interact. REMEMBER: if you need to access the html elements int he javascript, you have to put the reference to the javascript file at the BOTTOM of your main in html or else it would be able to find the elements because it will have run before the html. 
+
+
+Simon Service Notes:
+1. To deploy now that we have node.js and everything, use: ./deployService.sh -k ~/Desktop/CS260/AshlynDunn16.pem -h 260projectad.click -s simon
+2. I learned about how to set the port, check the index.js file in the root to see
+3. make sure to set the port on my startup to 4000 --use the same code in SimonV2 index.js to do this!!!
+4. The steps to chenge it to hosted by a web server are in "Simon Service"
+5. I got a better understanding of what is happeneding and how we are now hosting the site
+6. I also learned about get and pull requests etc.
