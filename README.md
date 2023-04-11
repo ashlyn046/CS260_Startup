@@ -104,3 +104,9 @@ Simon Login Notes:
 3. I learned where to put the web apis and how to get them to function from the actual website as well as how to get the application to listen on a port so that I can make requests from my terminal
 4. To make it listen from a port, I click the icon with the play symbole and the bug and then click run and debug (this is the same as typing f5)
 5. Finally, I learned that if I try to make it listen from the port, it is more difficult to complete tasks for some reason, so I shouldn't do it that way
+
+Simon Websocket Notes:
+1. Websocket changes the client-server relationship to a peer-peer relationship
+2. This allows the server and client to interact back and forth rather than only letting the client make requests to the server
+3. I learned that to user websocket, you first have to run npm install ws to install it
+4. I will user websocket to let users communicate by captioning their posts, and allowing other users to see these captions
