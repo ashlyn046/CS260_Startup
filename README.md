@@ -97,3 +97,10 @@ Simon DB Notes:
 4. I also learned how to store keys in my environment so that I can access them in my code without publishing them publicly
 5. I learned after shelling in, you do :wq to get out
 6. I learned more about the difference between zshell and bash. I am using zshell
+
+Simon Login Notes:
+1. I learned how to authenticate users
+2. I learned that you need to connect to the Mongo database to store login information with usernames and passwords
+3. I learned where to put the web apis and how to get them to function from the actual website as well as how to get the application to listen on a port so that I can make requests from my terminal
+4. To make it listen from a port, I click the icon with the play symbole and the bug and then click run and debug (this is the same as typing f5)
+5. Finally, I learned that if I try to make it listen from the port, it is more difficult to complete tasks for some reason, so I shouldn't do it that way
