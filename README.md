@@ -89,3 +89,11 @@ Simon Service Notes:
 4. The steps to chenge it to hosted by a web server are in "Simon Service"
 5. I got a better understanding of what is happeneding and how we are now hosting the site
 6. I also learned about get and pull requests etc.
+
+Simon DB Notes:
+1. I learned where to put all the stuff connecting to the Mongo database
+2. This project was basically just more exposure to and i more direct example of the short one before it
+3. Deployment string: ./deployService.sh -k ~/Desktop/CS260/AshlynDunn16.pem -h 260projectad.click -s simon
+4. I also learned how to store keys in my environment so that I can access them in my code without publishing them publicly
+5. I learned after shelling in, you do :wq to get out
+6. I learned more about the difference between zshell and bash. I am using zshell
