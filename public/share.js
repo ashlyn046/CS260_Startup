@@ -13,28 +13,26 @@ function share() {
       title: titleEl.value,
     });
 
-    //FIX:: i added this and it stopped working lol
+    //this pushed on the next song
     friendsSongs.push({
       singer: singerEl.value,
       title: titleEl.value,
-      user: "NA" //fix! i dont have users yet
+      user: localStorage.getItem("userName")
     })
   
+    //setting the songs in local storage
     localStorage.setItem("profSongs", JSON.stringify(profSongs));
     alert("Song shared successfully!");
-    //singerEl.value = "";  CHANGED fix
-    //titleEl.value = "";
 
-    //ADDED FIX
     localStorage.setItem("friendsSongs", JSON.stringify(friendsSongs));
     singerEl.value = "";
     titleEl.value = "";
 
+    //logging the namesand titles of each song
     profSongs.forEach(song => {
         console.log(`Name: ${song.singer}, Title: ${song.title}`);
       });
 
-    //ADDED FIX!!!
     friendsSongs.forEach(song => {
       console.log(`User: ${"NA"}, Name: ${song.singer}, Title: ${song.title}`);
     });

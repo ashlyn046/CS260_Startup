@@ -1,4 +1,3 @@
-//NOTE:: I JUST COPIED AND PASTED THIS, IT MAY NEED TO BE UPDATED
 const express = require('express');
 const app = express();
 
@@ -31,9 +30,11 @@ apiRouter.post('/song', (req, res) => {
 
 // Return the application's default page if the path is unknown
 app.use((_req, res) => {
+  console.log("in the one");
   res.sendFile('index.html', { root: 'public' });
 });
 
+console.log('Starting server...');
 app.listen(port, () => {
   console.log(`Listening on port ${port}`);
 });

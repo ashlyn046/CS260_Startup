@@ -1,5 +1,3 @@
-//UPDATED!!!
-
 async function loadSongs() {
   let songs = [];
   try {
