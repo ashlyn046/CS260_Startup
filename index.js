@@ -15,15 +15,18 @@ app.use(express.static('public'));
 var apiRouter = express.Router();
 app.use(`/api`, apiRouter);
 
-// GetScores
-apiRouter.get('/scores', (_req, res) => {
-  res.send(scores);
+//This code defines a route on the /api/songs endpoint that responds with the current songs in JSON format. 
+//The songs are stored in a variable called songs.
+apiRouter.get('/songs', (_req, res) => {
+  res.send(songs);
 });
 
-// SubmitScore
-apiRouter.post('/score', (req, res) => {
-  scores = updateScores(req.body, scores);
-  res.send(scores);
+//This code defines a route on the /api/score endpoint that accepts a JSON payload representing a new 
+//score submission. It passes the request body to a function called updateScores along with the current scores array. 
+//It then sends back the updated high scores array.
+apiRouter.post('/song', (req, res) => {
+  songs = updateSongs(req.body, songs);
+  res.send(songs);
 });
 
 // Return the application's default page if the path is unknown
@@ -37,24 +40,13 @@ app.listen(port, () => {
 
 // updateScores considers a new score for inclusion in the high scores.
 // The high scores are saved in memory and disappear whenever the service is restarted.
-let scores = [];
-function updateScores(newScore, scores) {
-  let found = false;
-  for (const [i, prevScore] of scores.entries()) {
-    if (newScore.score > prevScore.score) {
-      scores.splice(i, 0, newScore);
-      found = true;
-      break;
-    }
+let songs = [];
+function updateSongs(newSong, songs) {
+  songs.push(newSong);
+
+  if (songs.length > 10) {
+    songs.length = 10;
   }
 
-  if (!found) {
-    scores.push(newScore);
-  }
-
-  if (scores.length > 10) {
-    scores.length = 10;
-  }
-
-  return scores;
+  return songs;
 }
