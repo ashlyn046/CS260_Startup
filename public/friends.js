@@ -1,17 +1,26 @@
-//in the end, this page will have your posts and your friends' posts, but for now if just has your posts
-function loadSongs() {
+async function loadSongs() {
+  let songs = [];
+  try {
+    // Get the latest songs from the service
+    //This line sends a fetch request to the /api/scores endpoint. The await keyword is used to wait for 
+    //the response to come back before continuing to the next line.
+    const response = await fetch('/api/songs');
+    songs = await response.json();
 
-    //making an array to hold our songs
-    let songs = [];
-
-    //getting the text from local storage
-    const songsText = localStorage.getItem('friendsSongs');
-
-    //if there is text (there are profile songs), then making songs array parse songs text
+    // Save the songs in case we go offline in the future
+    localStorage.setItem('songs', JSON.stringify(songs));
+  } catch {
+    // If there was an error then just use the last saved scores
+    const songsText = localStorage.getItem('songs');
     if (songsText) {
       songs = JSON.parse(songsText);
     }
-  
+  }
+
+  displaySongs(songs);
+}
+
+function displaySongs(songs){
     //this is making the table body element equal to the table we already have in friends.html
     const tableBodyEl = document.querySelector('#songs');
 
