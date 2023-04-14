@@ -1,3 +1,4 @@
+//never really changed
 const { MongoClient } = require('mongodb');
 const bcrypt = require('bcrypt');
 const uuid = require('uuid');
@@ -28,11 +29,11 @@ const songCollection = client.db('songshare').collection('song');
  async function createUser(username, password) {
    // Hash the password before we insert it into the database
 
-   //const passwordHash = await bcrypt.hash(password, 10); FIX!!! encrypting password
+   const passwordHash = await bcrypt.hash(password, 10); 
 
    const user = {
      username: username,
-     password: password, //FIX passwordHash
+     password: passwordHash, 
      token: uuid.v4(),
    };
    await userCollection.insertOne(user);
