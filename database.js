@@ -14,8 +14,8 @@ if (!userName) {
 const url = `mongodb+srv://${userName}:${password}@${hostname}`;
 
 const client = new MongoClient(url);
-const userCollection = client.db('songShare').collection('user');
-const songCollection = client.db('songShare').collection('song');
+const userCollection = client.db('songshare').collection('user');
+const songCollection = client.db('songshare').collection('song');
 
  function getUser(username) {
      return userCollection.findOne({ username: username });
@@ -27,11 +27,12 @@ const songCollection = client.db('songShare').collection('song');
 
  async function createUser(username, password) {
    // Hash the password before we insert it into the database
-   const passwordHash = await bcrypt.hash(password, 10);
+
+   //const passwordHash = await bcrypt.hash(password, 10); FIX!!! encrypting password
 
    const user = {
      username: username,
-     password: passwordHash,
+     password: password, //FIX passwordHash
      token: uuid.v4(),
    };
    await userCollection.insertOne(user);

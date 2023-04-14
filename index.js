@@ -42,6 +42,7 @@ apiRouter.post('/auth/create', async (req, res) => {
 
 // GetAuth token for the provided credentials
 apiRouter.post('/auth/login', async (req, res) => {
+  console.log("in login api");
   const user = await DB.getUser(req.body.username);
   if (user) {
     if (await bcrypt.compare(req.body.password, user.password)) {
@@ -67,7 +68,7 @@ apiRouter.get('/user/:username', async (req, res) => {
     res.send({ username: user.username, authenticated: token === user.token });
     return;
   }
-  res.status(404).send({ msg: 'Unknown' });
+  res.status(404).send({ msg: 'Not in Database' });
 });
 
 // secureApiRouter verifies credentials for endpoints
@@ -124,4 +125,5 @@ function setAuthCookie(res, authToken) {
 }
 
 app.listen(port, () => {
+  console.log("Listening on port 4000");
 });

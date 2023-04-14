@@ -1,24 +1,28 @@
+//called automatically
 (async () => {
   let authenticated = false;
-  const userName = localStorage.getItem('userName');
+  const userName = localStorage.getItem('userName'); //gets the username if it was already in storage
   if (userName) {
-    const nameEl = document.querySelector('#userName');
+    const nameEl = document.querySelector('#userName'); //this fills the html with the username from storage
     nameEl.value = userName;
     const user = await getUser(nameEl.value);
     authenticated = user?.authenticated;
+
+    if(user===undefined){
+      authenticated = false;
+    }
   }
 
   if (authenticated) {
-    document.querySelector('#playerName').textContent = userName;
-    setDisplay('loginControls', 'none');
-    setDisplay('playControls', 'block');
+    alert("authenticated");
+    window.location.href = "friends.html";
   } else {
-    setDisplay('loginControls', 'block');
-    setDisplay('playControls', 'none');
+    //alert("User not in db");
   }
 })();
 
 async function loginUser() {
+  debugger
   loginOrCreate(`/api/auth/login`);
 }
 
@@ -29,28 +33,26 @@ async function createUser() {
 async function loginOrCreate(endpoint) {
   const userName = document.querySelector('#userName')?.value;
   const password = document.querySelector('#userPassword')?.value;
+  debugger
   const response = await fetch(endpoint, {
     method: 'post',
-    body: JSON.stringify({ email: userName, password: password }),
+    body: JSON.stringify({ username: userName, password: password }),
     headers: {
       'Content-type': 'application/json; charset=UTF-8',
     },
   });
+  debugger
   const body = await response.json();
-
+  debugger
   if (response?.status === 200) {
     localStorage.setItem('userName', userName);
-    window.location.href = 'play.html';
+    window.location.href = 'friends.html';
   } else {
     const modalEl = document.querySelector('#msgModal');
     modalEl.querySelector('.modal-body').textContent = `⚠ Error: ${body.msg}`;
     const msgModal = new bootstrap.Modal(modalEl, {});
     msgModal.show();
   }
-}
-
-function play() {
-  window.location.href = 'play.html';
 }
 
 function logout() {
@@ -66,16 +68,13 @@ async function getUser(username) {
   if (response.status === 200) {
     return response.json();
   }
-
   return null;
 }
+   window.onload = function() {
+     const loginButton = document.querySelector("#login");
+     loginButton.addEventListener("click", loginUser);
+   }
 
-function setDisplay(controlId, display) {
-  const playControlEl = document.querySelector(`#${controlId}`);
-  if (playControlEl) {
-    playControlEl.style.display = display;
-  }
-}
 
 //OLD CODE
 // function login() {

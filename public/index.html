@@ -1,4 +1,4 @@
-    <!-- this is the login page -->
+<!-- this is the login page -->
 <!DOCTYPE html>
 <html lang="en">
   <head>
@@ -45,7 +45,7 @@
           <h1>Login</h1>
           <div class="container">
             <form>
-                <input placeholder="Username" type="text" name="username1" class="username" id="username" required />
+                <input placeholder="Username" type="text" name="username1" class="username" id="userName" required />
                     <label for="username1"  style="display:none">Username Required</label>
                 <input placeholder="Password" type="password" class="password1" name="password" id = "password" required/>
                     <label for="password1"  style="display:none">Password Required</label>
@@ -55,6 +55,24 @@
           </div>
         </div>
       <div>
+
+              <!-- Error dialog -->
+      <div class="modal fade" id="msgModal" tabindex="-1">
+        <div class="modal-dialog modal-dialog-centered">
+          <div class="modal-content text-dark">
+            <div class="modal-body">error message here</div>
+            <div class="modal-footer">
+              <button
+                type="button"
+                class="btn btn-secondary"
+                data-bs-dismiss="modal"
+              >
+                Close
+              </button>
+            </div>
+          </div>
+        </div>
+      </div>
       
       <script src="login.js"></script>
 
