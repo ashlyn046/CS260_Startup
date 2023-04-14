@@ -1,33 +1,28 @@
-// //called automatically
-// (async () => {
-//   let authenticated = false;
-//   const userName = localStorage.getItem('userName'); //gets the username if it was already in storage
-//   if (userName) {
-//     const nameEl = document.querySelector('#userName'); //this fills the html with the username from storage
-//     nameEl.value = userName;
-//     const user = await getUser(nameEl.value);
-//     authenticated = user?.authenticated;
+(async () => {
+  let authenticated = false;
+  const userName = localStorage.getItem('userName');
+  if (userName) {
+    const nameEl = document.querySelector('#userName');
+    nameEl.value = userName;
+    const user = await getUser(nameEl.value);
+    authenticated = user?.authenticated;
+  }
 
-//     if(user===undefined){
-//       authenticated = false;
-//     }
-//   }
-
-//   if (authenticated) {
-//     alert("authenticated");
-//     window.location.href = "friends.html";
-//   } else {
-//     //alert("User not in db");
-//   }
-// })();
+  if (authenticated) {
+    document.querySelector('#playerName').textContent = userName;
+    setDisplay('loginControls', 'none');
+    setDisplay('playControls', 'block');
+  } else {
+    setDisplay('loginControls', 'block');
+    setDisplay('playControls', 'none');
+  }
+})();
 
 async function loginUser() {
-  debugger
   loginOrCreate(`/api/auth/login`);
 }
 
 async function createUser() {
-  debugger
   loginOrCreate(`/api/auth/create`);
 }
 
@@ -45,7 +40,7 @@ async function loginOrCreate(endpoint) {
 
   if (response?.status === 200) {
     localStorage.setItem('userName', userName);
-    window.location.href = 'play.html';
+    window.location.href = 'profile.html';
   } else {
     const modalEl = document.querySelector('#msgModal');
     modalEl.querySelector('.modal-body').textContent = `⚠ Error: ${body.msg}`;
@@ -54,30 +49,8 @@ async function loginOrCreate(endpoint) {
   }
 }
 
-// async function loginOrCreate(endpoint) {
-//   const userName = document.querySelector('#userName')?.value;
-//   const password = document.querySelector('#password')?.value;
-//   const response = await fetch(endpoint, {
-//     method: 'post',
-//     body: JSON.stringify({ username: userName, password: password }),
-//     headers: {
-//       'Content-type': 'application/json;',
-//     },
-//   });
-//   console.log("response: ", response);
-//   alert("made it out");
-//   debugger
-//   const body = await response.json(); //THIS LINE DOESNT WORK???
-//   debugger
-//   if (response?.status === 200) {
-//     localStorage.setItem('userName', userName);
-//     window.location.href = 'friends.html';
-//   } else {
-//     const modalEl = document.querySelector('#msgModal');
-//     modalEl.querySelector('.modal-body').textContent = `⚠ Error: ${body.msg}`;
-//     const msgModal = new bootstrap.Modal(modalEl, {});
-//     msgModal.show();
-//   }
+// function play() {
+//   window.location.href = 'profile.html';
 // }
 
 function logout() {
@@ -86,32 +59,20 @@ function logout() {
   }).then(() => (window.location.href = '/'));
 }
 
-async function getUser(username) {
+async function getUser(email) {
   let songs = [];
   // See if we have a user with the given email.
-  const response = await fetch(`/api/user/${username}`);
+  const response = await fetch(`/api/user/${email}`);
   if (response.status === 200) {
     return response.json();
   }
+
   return null;
 }
 
-
-//OLD CODE
-// function login() {
-//     event.preventDefault();
-//     const nameEl = document.querySelector("#username");
-//     const passwordEl = document.querySelector("#password");
-//     localStorage.setItem("userName", nameEl.value);
-//     localStorage.setItem("password", passwordEl.value);
-//     window.location.href = "friends.html";
-//   }
-  
-//   window.onload = function() {
-//     const loginButton = document.querySelector("#login");
-//     loginButton.addEventListener("click", login);
-//   }
-
-
-
-  //if you need to edit inside javascript, add js at the bottom of html. if you need js to run first, then put it in the head
+function setDisplay(controlId, display) {
+  const playControlEl = document.querySelector(`#${controlId}`);
+  if (playControlEl) {
+    playControlEl.style.display = display;
+  }
+}
