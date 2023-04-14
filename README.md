@@ -110,3 +110,10 @@ Simon Websocket Notes:
 2. This allows the server and client to interact back and forth rather than only letting the client make requests to the server
 3. I learned that to user websocket, you first have to run npm install ws to install it
 4. I will user websocket to let users communicate by captioning their posts, and allowing other users to see these captions
+
+Startup Service Notes:
+1. I learned that if the script is unable to deploy, there may be an issue with the instance
+2. I learned how to debug in the web browser using inspect and typing "debug" in the actual file
+3. I learned a lot more about how to store things like a user's credentials
+4. I learned that mac uses zshell by default and vs code uses bash by default, so this can make the environment variables confusing
+5. To fix this, just put the environment variables in both environments
