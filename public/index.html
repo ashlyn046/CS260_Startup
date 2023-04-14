@@ -1,16 +1,12 @@
-<!-- this is the login page -->
 <!DOCTYPE html>
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
-    <!-- Tell browsers not to scale the viewport automatically -->
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Song Share</title>
 
-    <link rel="stylesheet" href="login.css" />
     <link rel="stylesheet" href="style.css" />
 
-    <!-- Include bootstrap CSS framework -->
     <link
       href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/css/bootstrap.min.css"
       rel="stylesheet"
@@ -18,45 +14,55 @@
       crossorigin="anonymous"
     />
   </head>
-
-
   <body>
     <header>
-        <div>SongShare </div>
+      <nav>
+        <a href="#">Song Share<sup>&reg;</sup></a>
         <menu class="navbar-nav">
-            <ul>
-                  <li class="nav-item">
-                    <a class="nav-link" href="friends.html">Friends</a>
-                  </li>
-                  <li class="nav-item">
-                    <a class="nav-link" href="profile.html">Profile</a>
-                  </li>
-                  <li class="nav-item">
-                    <a class="nav-link active" href="share.html">Share</a>
-                  </li>
+        </menu>
+      </nav>
+    </header>
 
-            </ul>
-          </menu>
-      </header>
-
-
-      <div class="login">
-        <div class="form">
-          <h1>Login</h1>
-          <div class="container">
-            <form>
-                <input placeholder="Username" type="text" name="username1" class="username" id="userName" required />
-                    <label for="username1"  style="display:none">Username Required</label>
-                <input placeholder="Password" type="password" class="password1" name="password" id = "password" required/>
-                    <label for="password1"  style="display:none">Password Required</label>
-                <button id="login" class="btn" onclick="loginUser()">Login</button>
-                <button id="create" class="btn" onclick="createUser()">Create</button>
-            </form>
-          </div>
-        </div>
+    <main class="container-fluid bg-secondary text-center">
       <div>
+        <h1>Song Share</h1>
+        <!-- Displayed when needing authentication -->
+        <div id="loginControls" style="display: none">
+          <div class="input-group mb-3">
+            <span class="input-group-text">username</span>
+            <input
+              class="form-control"
+              type="text"
+              id="userName"
+              placeholder="Username"
+            />
+          </div>
+          <div class="input-group mb-3">
+            <span class="input-group-text">Password</span>
+            <input
+              class="form-control"
+              type="password"
+              id="userPassword"
+              placeholder="password"
+            />
+          </div>
+          <button type="button" class="btn btn-primary" onclick="loginUser()">
+            Login
+          </button>
+          <button type="button" class="btn btn-primary" onclick="createUser()">
+            Create
+          </button>
+        </div>
+        <!-- Displayed when ready to play -->
+        <div id="playControls" style="display: none">
+          <div id="playerName"></div>
+          <button type="button" class="btn btn-secondary" onclick="logout()">
+            Confirm Logout
+          </button>
+        </div>
+      </div>
 
-              <!-- Error dialog -->
+      <!-- Error dialog -->
       <div class="modal fade" id="msgModal" tabindex="-1">
         <div class="modal-dialog modal-dialog-centered">
           <div class="modal-content text-dark">
@@ -73,9 +79,23 @@
           </div>
         </div>
       </div>
-      
-      <script src="login.js"></script>
+    </main>
 
+    <footer>
+      <div class="container-fluid">
+        <span class="text-reset">Ashlyn Dunn</span>
+        <a
+          class="text-reset"
+          href="https://github.com/ashlyn046/CS260_Startup"
+          >Source</a
+        >
+      </div>
+    </footer>
+    <script src="login.js"></script>
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-kenU1KFdBIe4zVF0s0G1M5b4hcpxyD9F7jL+jjXkk+Q2h455rYXK/7HAuoJl+0I4"
+      crossorigin="anonymous"
+    ></script>
   </body>
-
 </html>

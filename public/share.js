@@ -75,7 +75,6 @@ function displayPicture() {
 }
 
 window.onload = function() {
-  alert("new 1");
   displayPicture();
   const shareButton = document.querySelector("#share");
   shareButton.addEventListener("click", share);
