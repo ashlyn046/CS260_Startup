@@ -18,6 +18,7 @@ async function loadSongs() {
   }
 
   displaySongs(songs);
+  
 }
 
 function displaySongs(songs){

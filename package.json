@@ -1,5 +1,5 @@
 {
-  "name": "startup-websocket",
+  "name": "startup",
   "version": "1.0.0",
   "description": "This demonstrates using WebSocket for peer to peer communication.",
   "main": "index.js",
