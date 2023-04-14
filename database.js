@@ -12,7 +12,7 @@ if (!userName) {
 const url = `mongodb+srv://${userName}:${password}@${hostname}`;
 
 const client = new MongoClient(url);
-// const userCollection = client.db('songShare').collection('user');
+const userCollection = client.db('songShare').collection('user');
 const songCollection = client.db('songShare').collection('song');
 
  function getUser(username) {
