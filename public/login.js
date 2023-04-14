@@ -1,25 +1,25 @@
-//called automatically
-(async () => {
-  let authenticated = false;
-  const userName = localStorage.getItem('userName'); //gets the username if it was already in storage
-  if (userName) {
-    const nameEl = document.querySelector('#userName'); //this fills the html with the username from storage
-    nameEl.value = userName;
-    const user = await getUser(nameEl.value);
-    authenticated = user?.authenticated;
+// //called automatically
+// (async () => {
+//   let authenticated = false;
+//   const userName = localStorage.getItem('userName'); //gets the username if it was already in storage
+//   if (userName) {
+//     const nameEl = document.querySelector('#userName'); //this fills the html with the username from storage
+//     nameEl.value = userName;
+//     const user = await getUser(nameEl.value);
+//     authenticated = user?.authenticated;
 
-    if(user===undefined){
-      authenticated = false;
-    }
-  }
+//     if(user===undefined){
+//       authenticated = false;
+//     }
+//   }
 
-  if (authenticated) {
-    alert("authenticated");
-    window.location.href = "friends.html";
-  } else {
-    //alert("User not in db");
-  }
-})();
+//   if (authenticated) {
+//     alert("authenticated");
+//     window.location.href = "friends.html";
+//   } else {
+//     //alert("User not in db");
+//   }
+// })();
 
 async function loginUser() {
   debugger
@@ -27,26 +27,25 @@ async function loginUser() {
 }
 
 async function createUser() {
+  debugger
   loginOrCreate(`/api/auth/create`);
 }
 
 async function loginOrCreate(endpoint) {
   const userName = document.querySelector('#userName')?.value;
   const password = document.querySelector('#userPassword')?.value;
-  debugger
   const response = await fetch(endpoint, {
     method: 'post',
-    body: JSON.stringify({ username: userName, password: password }),
+    body: JSON.stringify({ email: userName, password: password }),
     headers: {
       'Content-type': 'application/json; charset=UTF-8',
     },
   });
-  debugger
   const body = await response.json();
-  debugger
+
   if (response?.status === 200) {
     localStorage.setItem('userName', userName);
-    window.location.href = 'friends.html';
+    window.location.href = 'play.html';
   } else {
     const modalEl = document.querySelector('#msgModal');
     modalEl.querySelector('.modal-body').textContent = `⚠ Error: ${body.msg}`;
@@ -54,6 +53,32 @@ async function loginOrCreate(endpoint) {
     msgModal.show();
   }
 }
+
+// async function loginOrCreate(endpoint) {
+//   const userName = document.querySelector('#userName')?.value;
+//   const password = document.querySelector('#password')?.value;
+//   const response = await fetch(endpoint, {
+//     method: 'post',
+//     body: JSON.stringify({ username: userName, password: password }),
+//     headers: {
+//       'Content-type': 'application/json;',
+//     },
+//   });
+//   console.log("response: ", response);
+//   alert("made it out");
+//   debugger
+//   const body = await response.json(); //THIS LINE DOESNT WORK???
+//   debugger
+//   if (response?.status === 200) {
+//     localStorage.setItem('userName', userName);
+//     window.location.href = 'friends.html';
+//   } else {
+//     const modalEl = document.querySelector('#msgModal');
+//     modalEl.querySelector('.modal-body').textContent = `⚠ Error: ${body.msg}`;
+//     const msgModal = new bootstrap.Modal(modalEl, {});
+//     msgModal.show();
+//   }
+// }
 
 function logout() {
   fetch(`/api/auth/logout`, {
@@ -70,10 +95,6 @@ async function getUser(username) {
   }
   return null;
 }
-   window.onload = function() {
-     const loginButton = document.querySelector("#login");
-     loginButton.addEventListener("click", loginUser);
-   }
 
 
 //OLD CODE
