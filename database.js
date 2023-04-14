@@ -1,4 +1,6 @@
-const {MongoClient} = require('mongodb');
+const { MongoClient } = require('mongodb');
+const bcrypt = require('bcrypt');
+const uuid = require('uuid');
 
 //NOTE:: if this is not working, change terminal in javascript debug terminal to zshell
 const userName = process.env.MONGOUSER;
