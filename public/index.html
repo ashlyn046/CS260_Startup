@@ -7,7 +7,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Song Share</title>
 
-    <script src="login.js"></script>
+    <link rel="stylesheet" href="login.css" />
     <link rel="stylesheet" href="style.css" />
 
     <!-- Include bootstrap CSS framework -->
@@ -49,11 +49,14 @@
                     <label for="username1"  style="display:none">Username Required</label>
                 <input placeholder="Password" type="password" class="password1" name="password" id = "password" required/>
                     <label for="password1"  style="display:none">Password Required</label>
-                <button id="login" class="btn" >Login</button>
+                <button id="login" class="btn" onclick="loginUser()">Login</button>
+                <button id="create" class="btn" onclick="createUser()">Create</button>
             </form>
           </div>
         </div>
       <div>
+      
+      <script src="login.js"></script>
 
   </body>
 
