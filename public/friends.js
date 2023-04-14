@@ -39,7 +39,7 @@ function displaySongs(songs){
         const titleTdEl = document.createElement('td');
   
         //this is where we actually extract the user and song, we will have to add these !!! (at least the user)
-        userTdEl.textContent = song.user; //FIXXX this doesn't exist yet
+        userTdEl.textContent = song.user;
         singerTdEl.textContent = song.singer;
         titleTdEl.textContent = song.title;
   

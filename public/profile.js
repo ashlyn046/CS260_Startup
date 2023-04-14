@@ -40,14 +40,19 @@ function displaySongs(songs) {
         rowEl.appendChild(singerTdEl);
         rowEl.appendChild(titleTdEl);
   
-        //error: cannot read property of null
-        tableBodyEl.appendChild(rowEl);
+        //FIXXX XHANGED
+        if(song.user == localStorage.getItem("userName")){
+          tableBodyEl.appendChild(rowEl);
+        }
+
       }
     } else {
       tableBodyEl.innerHTML = '<tr><td colSpan=2>No songs yet!</td></tr>'; //this didn't post :(
     }
 
     //here, we upload username and password to display
+
+    //here, we get the elements that we want to put username and password into
     const usernameElement = document.getElementById("username");
     const passwordElement = document.getElementById("password");
 
