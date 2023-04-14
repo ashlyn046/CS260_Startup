@@ -1,5 +1,6 @@
 const {MongoClient} = require('mongodb');
 
+//NOTE:: if this is not working, change terminal in javascript debug terminal to zshell
 const userName = process.env.MONGOUSER;
 const password = process.env.MONGOPASSWORD;
 const hostname = process.env.MONGOHOSTNAME;
