@@ -1,19 +1,27 @@
 {
-  "name": "startup",
+  "name": "startup-websocket",
   "version": "1.0.0",
-  "description": "# Design Music is a powerful form of expression that can lead to deep human connections. The Song Share app allows individuals to connect with friends and family on another level by sharing their favorite songs. When users find a new song to obsess over, they will be able to share it to their profile. The posted song will then appear on a public feed for their friends to view and interact with. Additionally, when users find themselves on the hunt for new music, they can use the song share app to see what their friends have been listening to. In this way, the song share app is a social media to bring people together.",
+  "description": "This demonstrates using WebSocket for peer to peer communication.",
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },
-  "keywords": [],
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/webprogramming260/simon-websocket.git"
+  },
   "author": "",
-  "license": "ISC",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/webprogramming260/simon-websocket/issues"
+  },
+  "homepage": "https://github.com/webprogramming260/simon-websocket#readme",
   "dependencies": {
     "bcrypt": "^5.1.0",
     "cookie-parser": "^1.4.6",
     "express": "^4.18.2",
-    "mongodb": "^5.2.0",
-    "uuid": "^9.0.0"
+    "mongodb": "^4.12.0",
+    "uuid": "^9.0.0",
+    "ws": "^8.12.0"
   }
 }

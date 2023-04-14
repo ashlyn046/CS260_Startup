@@ -40,7 +40,7 @@ function displaySongs(songs) {
         rowEl.appendChild(singerTdEl);
         rowEl.appendChild(titleTdEl);
   
-        //FIXXX XHANGED
+        //only put songs uploaded by user
         if(song.user == localStorage.getItem("userName")){
           tableBodyEl.appendChild(rowEl);
         }
