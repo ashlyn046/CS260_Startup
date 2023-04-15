@@ -117,3 +117,10 @@ Startup Service Notes:
 3. I learned a lot more about how to store things like a user's credentials
 4. I learned that mac uses zshell by default and vs code uses bash by default, so this can make the environment variables confusing
 5. To fix this, just put the environment variables in both environments
+
+Simon React Notes:
+1. I learned that when dependencies are already listed in teh package.json, then you just have to run npm install and it will install all necessary packages
+2. I also learned that, because of this, you ened to run npm install in subfolders too sometimes
+3. I learned a lot more about react in general
+4. I learned that, in order to debug a react project, it is better to create a launch.json file
+5. vs code will generate this for you if you click the link int he debug window
