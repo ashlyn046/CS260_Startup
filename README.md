@@ -18,17 +18,6 @@ Music is a universal language, and Song Share enhances this by creating a shared
 To access the server:
 - SSH Command: `ssh -i ~/Desktop/CS260/AshlynDunn16.pem ubuntu@260projectad.click`
 - Deployment: `./deployWebsite.sh -k ~/Desktop/CS260/AshlynDunn16.pem -h 260projectad.click`
-
-### Notes on GitHub Workflow
-
-From this project, I improved my understanding of version control:
-1. **Push to GitHub**:
-   - Make updates, commit, and push.
-2. **Pull from GitHub**:
-   - Make updates, commit, and pull to sync with GitHub.
-
-In case of merge conflicts, VS Code provides an easy-to-use interface for resolving them.
-
 ### Additional Notes on Development & Tools
 
 - **CSS and Flex**: Improved skills in layout design using Flexbox.
