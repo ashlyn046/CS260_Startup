@@ -13,11 +13,6 @@ Song Share is a social media app designed to deepen connections by sharing music
 
 Music is a universal language, and Song Share enhances this by creating a shared musical experience. Users can post, share, and discuss music, making it a platform to explore new songs and reconnect over shared tastes.
 
-## Deployment & Server Access
-
-To access the server:
-- SSH Command: `ssh -i ~/Desktop/CS260/AshlynDunn16.pem ubuntu@260projectad.click`
-- Deployment: `./deployWebsite.sh -k ~/Desktop/CS260/AshlynDunn16.pem -h 260projectad.click`
 ### Additional Notes on Development & Tools
 
 - **CSS and Flex**: Improved skills in layout design using Flexbox.
